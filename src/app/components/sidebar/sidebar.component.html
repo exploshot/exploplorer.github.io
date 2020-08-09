@@ -1,0 +1,85 @@
+
+<div class="logo">
+    <a href="" class="simple-text logo-mini">
+      <div class="logo-img">
+          <img src="./assets/img/angular2-logo-white.png"/>
+      </div>
+    </a>
+    <a href="/" class="simple-text logo-normal">
+        Qwertycoin
+    </a>
+</div>
+<div class="sidebar-wrapper">
+    <ul class="nav">
+        <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}} nav-item">
+            <a [routerLink]="[menuItem.path]">
+                <i class="now-ui-icons {{menuItem.icon}}"></i>
+                <p>{{menuItem.title}}</p>
+            </a>
+        </li>
+        <li class="nav-item active active-pro">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <i></i>
+              Status:
+              <span class="value">{{ lastStats.status}}</span>
+            </li>
+            <li class="list-group-item" *ngIf="lastStats.version !== undefined">
+              <i></i>
+              Version:
+              <span class="value">{{ lastStats.version }}</span>
+            </li>
+            <li class="list-group-item">
+              <i></i>
+              Height:
+              <span class="value">{{ lastStats.height}}</span>
+            </li>
+            <li class="list-group-item">
+              <i></i>
+              Last block:
+              <span class="value">{{ lastStats.last_known_block_index }}</span>
+            </li>
+            <li class="list-group-item">
+              <i></i>
+              Difficulty:
+              <span class="value">
+                    {{ func.getReadableDifficulty(lastStats.difficulty, 4) }}
+                  </span>
+            </li>
+            <li class="list-group-item">
+              <i></i>
+              Alt. blocks:
+              <span class="value">{{ lastStats.alt_blocks_count }}</span>
+            </li>
+            <li class="list-group-item">
+              <i></i>
+              RPC connections:
+              <span class="value">{{ lastStats.rpc_connections_count }}</span>
+            </li>
+            <li class="list-group-item">
+              <i></i>
+              Inc. P2P connections:
+              <span class="value">{{ lastStats.incoming_connections_count }}</span>
+            </li>
+            <li class="list-group-item">
+              <i></i>
+              Out. P2P connections:
+              <span class="value">{{ lastStats.outgoing_connections_count }}</span>
+            </li>
+            <li class="list-group-item">
+              <i></i>
+              White peers:
+              <span class="value">{{ lastStats.white_peerlist_size }}</span>
+            </li>
+            <li class="list-group-item">
+              <i></i>
+              Grey peers:
+              <span class="value">{{ lastStats.grey_peerlist_size }}</span>
+            </li>
+          </ul>
+        </li>
+    </ul>
+
+
+
+</div>

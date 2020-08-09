@@ -17,7 +17,7 @@ Block explorer for Qwertycoin CryptoNote based cryptocurrency based on the Karbo
 ## Donate
 
 ```
-QWC: QWC1K6XEhCC1WsZzT9RRVpc1MLXXdHVKt2BUGSrsmkkXAvqh52sVnNc1pYmoF2TEXsAvZnyPaZu8MW3S8EWHNfAh7X2xa63P7Y
+QWC: QWC1FfPzWYY5aNiPwGSKQJfHz5o5ehsyeEQgCT3tb46nEnUvnw3Dz4NbNSVY5bNvAVTRuHygmcU4hU8ab2SXBigzAFjpVpK9Ky
 ```
 ```
 BTC: 1DkocMNiqFkbjhCmG4sg9zYQbi4YuguFWw
@@ -37,4 +37,4 @@ ETN: etnkJXJFqiH9FCt6Gq2HWHPeY92YFsmvKX7qaysvnV11M796Xmovo2nSu6EUCMnniqRqAhKX9AQ
 
 #### Thanks
 
-Cryptonote Developers, Bytecoin Developers, Monero Developers, Karbo, Qwertycoin Community
+Cryptonote Developers, Karbo, Qwertycoin Community

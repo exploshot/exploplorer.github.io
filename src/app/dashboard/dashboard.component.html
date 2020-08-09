@@ -1,0 +1,239 @@
+<div class="panel-header panel-header-lg dark">
+    <ngx-charts-line-chart
+            [scheme]="colorScheme"
+            [legend]="legend"
+            [legendPosition]="legendPosition"
+            [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="showYAxisLabel"
+            [xAxis]="xAxis"
+            [yAxis]="yAxis"
+            [xAxisLabel]="xAxisLabel"
+            [yAxisLabel]="yAxisLabel"
+            [timeline]="timeline"
+            [results]="multi"
+    >
+    </ngx-charts-line-chart>
+</div>
+
+<div class="main-content">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <i></i>
+                            Height:
+                            <span class="value">{{ lastStats.height }}</span>
+                        </li>
+                        <li class="list-group-item">
+                            <i></i>
+                            Transactions:
+                            <span class="value">{{ lastStats.tx_count }}</span>
+                        </li>
+                        <li class="list-group-item">
+                            <i></i>
+                            Min fee:
+                            <span class="value">{{ func.getReadableCoins(lastStats.min_tx_fee, 2, 0) }}</span>
+                        </li>
+                        <li class="list-group-item">
+                            <i></i>
+                            Reward:
+                            <span class="value">{{ func.addCommas(
+                                func.getReadableCoins(lastBlock.baseReward, 4, 0)
+                            )}}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <i></i>
+                            Supply:
+                            <span class="value">{{ func.addCommas(
+                                func.getReadableCoins(lastBlock.alreadyGeneratedCoins, 2, 1)
+                            )}}</span>
+                        </li>
+                        <li class="list-group-item">
+                            <i></i>
+                            Emission:
+                            <span
+                                    class="value">{{ (lastBlock.alreadyGeneratedCoins / 18446744073700000000 * 100).toFixed(2) + '%' }}</span>
+                        </li>
+                        <li class="list-group-item">
+                            <i></i>
+                            Avg. solve time:
+                            <span class="value"></span>
+                        </li>
+                        <li class="list-group-item">
+                            <i></i>
+                            Est. solve time:
+                            <span class="value"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <i></i>
+
+                            <span class="value"></span>
+                        </li>
+                        <li class="list-group-item">
+                            <i></i>
+
+                            <span class="value"></span>
+                        </li>
+                        <li class="list-group-item">
+                            <i></i>
+
+                            <span class="value"></span>
+                        </li>
+                        <li class="list-group-item">
+                            <i></i>
+
+                            <span class="value"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <coingecko-coin-ticker-widget coin-id="qwertycoin" currency="usd"
+                                                  locale="de"></coingecko-coin-ticker-widget>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" *ngIf="this.exSer.isAdvanced">
+
+        <!-- latest 30 Blocks -->
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title"> Recent Blocks</h3>
+                </div>
+                <div class="card-body">
+                    <div *ngFor="let initialBlock of initialBlocks">
+                        <mat-card>
+                            <mat-card-content>
+                                <div class="row">
+                                    <!--
+                                    <i class="col-md-2 fas fa-cube"></i>
+                                    -->
+                                    <app-cubes [blockHash]="initialBlock.hash" class="col-md-2"></app-cubes>
+                                    <div class="col-md-7">
+                                        <div class="row">
+                                            <div class="col-md-4">{{ func.addCommas(initialBlock.height) }}</div>
+                                            <div class="col-md-4"></div>
+                                            <div class="col-md-4"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">{{ (initialBlock.timestamp * 1000) | timeago:live }}</div>
+                                            <div class="col-md-4">{{ initialBlock.tx_count }} Transaction's</div>
+                                            <div class="col-md-4"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <button class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Block Reward">
+                                            {{ func.getReadableCoins(initialBlock.reward, 2, 0) }}
+                                        </button>
+                                    </div>
+                                </div>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+
+                    <!--
+                    <div class="table-full-width table-responsive">
+                        <table class="table">
+                            <thead class=" text-primary">
+                            <th>
+                                Height
+                            </th>
+                            <th>
+                                Date
+                            </th>
+                            <th>
+                                Size
+                            </th>
+                            <th>
+                                Hash
+                            </th>
+                            <th>
+                                Difficulty
+                            </th>
+                            <th class="text-right">
+                                Txs
+                            </th>
+                            </thead>
+                            <tbody *ngIf="initialBlocks">
+                            <tr *ngFor="let initialBlock of initialBlocks">
+                                <td>{{ func.addCommas(initialBlock.height) }}</td>
+                                <td class="date-time">{{ func.formatDate(initialBlock.timestamp) }}</td>
+                                <td>{{ func.formatBytes(initialBlock.cumul_size, 2)}}</td>
+                                <td>{{ initialBlock.hash }}</td>
+                                <td class="blk-diff">{{ func.addCommas(initialBlock.difficulty) }}</td>
+                                <td>{{ initialBlock.tx_count }}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    -->
+                </div>
+            </div>
+        </div>
+        <!-- Tx mempool -->
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header ">
+                    <h3 class="card-title">Transaction Pool</h3>
+                </div>
+                <div class="card-body ">
+                    <div class="table-full-width table-responsive">
+                        <table class="table">
+                            <thead class=" text-primary">
+                            <th>
+                                Date & Time
+                            </th>
+                            <th>
+                                Amount
+                            </th>
+                            <th>
+                                Fee
+                            </th>
+                            <th>
+                                Size
+                            </th>
+                            <th>
+                                Hash
+                            </th>
+                            </thead>
+                            <tbody>
+                            <tr *ngFor="let txMemPoolTx of txMemPoolTxs">
+                                <td>{{ func.formatDate(txMemPoolTx.receiveTime) }}</td>
+                                <td>{{ func.addCommas(
+                                    func.getReadableCoins(txMemPoolTx.amount_out, 4, true)
+                                )}}</td>
+                                <td>{{ func.getReadableCoins(txMemPoolTx.fee, 2, true)}}</td>
+                                <td>{{ func.formatBytes(txMemPoolTx.size, 2) }}</td>
+                                <td>{{ txMemPoolTx.hash }}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
