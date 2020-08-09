@@ -885,6 +885,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _explorer_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./explorer.service */ "./src/app/explorer.service.ts");
 /* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./functions */ "./src/app/functions.ts");
 /* harmony import */ var _dagonmetric_ng_cache__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @dagonmetric/ng-cache */ "./node_modules/@dagonmetric/ng-cache/__ivy_ngcc__/fesm2015/ng-cache.js");
+/* harmony import */ var _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/cdk/scrolling */ "./node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/scrolling.js");
+
 
 
 
@@ -916,6 +918,7 @@ var AppModule = /** @class */ (function () {
                 _dagonmetric_ng_cache__WEBPACK_IMPORTED_MODULE_14__["CacheLocalStorageModule"],
                 _dagonmetric_ng_cache__WEBPACK_IMPORTED_MODULE_14__["MemoryCacheModule"],
                 _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["NgbModule"],
+                _angular_cdk_scrolling__WEBPACK_IMPORTED_MODULE_15__["ScrollingModule"],
                 ngx_toastr__WEBPACK_IMPORTED_MODULE_7__["ToastrModule"].forRoot()
             ],
             declarations: [
@@ -2105,9 +2108,10 @@ __webpack_require__.r(__webpack_exports__);
 var environment = {
     production: false,
     nodeList: [
-        'http://node-00.testnet.qwertycoin.org:8197/',
-        'http://node-01.testnet.qwertycoin.org:8197/',
-        'http://node-11.testnet.qwertycoin.org:8197/',
+        'https://node-00.testnet.qwertycoin.org:8197/',
+        'https://node-01.testnet.qwertycoin.org:8197/',
+        'https://node-11.testnet.qwertycoin.org:8197/',
+        'https://pool-01.testnet.qwertycoin.org:8197/'
     ],
     poolList: [
         {
