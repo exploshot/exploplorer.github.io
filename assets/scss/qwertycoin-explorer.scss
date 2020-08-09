@@ -1,0 +1,99 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$qwertycoin-explorer-primary: mat-palette($mat-indigo);
+$qwertycoin-explorer-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$qwertycoin-explorer-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$qwertycoin-explorer-theme: mat-light-theme($qwertycoin-explorer-primary, $qwertycoin-explorer-accent, $qwertycoin-explorer-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($qwertycoin-explorer-theme);
+
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$qwertycoin-explorer-primary: mat-palette($mat-indigo);
+$qwertycoin-explorer-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$qwertycoin-explorer-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$qwertycoin-explorer-theme: mat-light-theme($qwertycoin-explorer-primary, $qwertycoin-explorer-accent, $qwertycoin-explorer-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($qwertycoin-explorer-theme);
+
+@import "~bootstrap/scss/bootstrap";
+@import 'qwertycoin-explorer/variables';
+@import 'qwertycoin-explorer/mixins';
+
+// Plugins CSS
+@import "qwertycoin-explorer/plugins/plugin-animate-bootstrap-notify";
+@import "qwertycoin-explorer/plugins/plugin-perfect-scrollbar";
+
+// Core CSS
+@import "qwertycoin-explorer/buttons";
+@import "qwertycoin-explorer/inputs";
+@import "qwertycoin-explorer/typography";
+@import "qwertycoin-explorer/misc";
+@import "qwertycoin-explorer/checkboxes-radio";
+
+// components
+@import "qwertycoin-explorer/navbar";
+@import "qwertycoin-explorer/page-header";
+@import "qwertycoin-explorer/dropdown";
+@import "qwertycoin-explorer/alerts";
+@import "qwertycoin-explorer/images";
+@import "qwertycoin-explorer/nucleo-outline";
+@import "qwertycoin-explorer/tables";
+@import "qwertycoin-explorer/sidebar-and-main-panel";
+@import "qwertycoin-explorer/footers";
+@import "qwertycoin-explorer/fixed-plugin";
+
+// cards
+@import "qwertycoin-explorer/cards";
+@import "qwertycoin-explorer/cards/card-plain";
+@import "qwertycoin-explorer/cards/card-chart";
+@import "qwertycoin-explorer/cards/card-user";
+@import "qwertycoin-explorer/cards/card-map";
+
+@import "qwertycoin-explorer/responsive";
+
+// ngx-charts
+@import "qwertycoin-explorer/ngx-dark";
+
+.value {
+    font-weight: 600;
+    display: block;
+    float: right;
+}
