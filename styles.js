@@ -580,10 +580,10 @@ module.exports = content.locals || {};
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/runner/work/fork_explorer-qwertycoin-org.github.io/fork_explorer-qwertycoin-org.github.io/node_modules/perfect-scrollbar/css/perfect-scrollbar.css */"./node_modules/perfect-scrollbar/css/perfect-scrollbar.css");
-__webpack_require__(/*! /home/runner/work/fork_explorer-qwertycoin-org.github.io/fork_explorer-qwertycoin-org.github.io/node_modules/ngx-toastr/toastr.css */"./node_modules/ngx-toastr/toastr.css");
-__webpack_require__(/*! /home/runner/work/fork_explorer-qwertycoin-org.github.io/fork_explorer-qwertycoin-org.github.io/src/assets/scss/qwertycoin-explorer.scss */"./src/assets/scss/qwertycoin-explorer.scss");
-module.exports = __webpack_require__(/*! /home/runner/work/fork_explorer-qwertycoin-org.github.io/fork_explorer-qwertycoin-org.github.io/src/assets/demo/demo.css */"./src/assets/demo/demo.css");
+__webpack_require__(/*! /home/runner/work/exploplorer.github.io/exploplorer.github.io/node_modules/perfect-scrollbar/css/perfect-scrollbar.css */"./node_modules/perfect-scrollbar/css/perfect-scrollbar.css");
+__webpack_require__(/*! /home/runner/work/exploplorer.github.io/exploplorer.github.io/node_modules/ngx-toastr/toastr.css */"./node_modules/ngx-toastr/toastr.css");
+__webpack_require__(/*! /home/runner/work/exploplorer.github.io/exploplorer.github.io/src/assets/scss/qwertycoin-explorer.scss */"./src/assets/scss/qwertycoin-explorer.scss");
+module.exports = __webpack_require__(/*! /home/runner/work/exploplorer.github.io/exploplorer.github.io/src/assets/demo/demo.css */"./src/assets/demo/demo.css");
 
 
 /***/ })

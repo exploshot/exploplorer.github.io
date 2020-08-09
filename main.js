@@ -2162,7 +2162,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/runner/work/fork_explorer-qwertycoin-org.github.io/fork_explorer-qwertycoin-org.github.io/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /home/runner/work/exploplorer.github.io/exploplorer.github.io/src/main.ts */"./src/main.ts");
 
 
 /***/ })
