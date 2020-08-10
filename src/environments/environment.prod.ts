@@ -1,8 +1,8 @@
 export const environment = {
   production: true,
   nodeList: [
-    'http://node-01.qwertycoin.org:8197/',
-    'http://node-02.qwertycoin.org:8197/'
+    'https://node-01.qwertycoin.org:8197/',
+    'https://node-02.qwertycoin.org:8197/'
   ],
   poolList: [
     {

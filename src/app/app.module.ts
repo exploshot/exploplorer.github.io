@@ -15,6 +15,7 @@ import {MainLayoutComponent} from './layouts/main-layout/main-layout.component';
 import {ExplorerService} from './explorer.service';
 import {Functions} from './functions';
 import {CacheLocalStorageModule, CacheModule, MemoryCacheModule} from '@dagonmetric/ng-cache';
+import {ScrollingModule} from '@angular/cdk/scrolling';
 
 @NgModule({
     imports: [
@@ -28,6 +29,7 @@ import {CacheLocalStorageModule, CacheModule, MemoryCacheModule} from '@dagonmet
         CacheLocalStorageModule,
         MemoryCacheModule,
         NgbModule,
+        ScrollingModule,
         ToastrModule.forRoot()
     ],
     declarations: [

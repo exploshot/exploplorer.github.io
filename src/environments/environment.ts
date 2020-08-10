@@ -6,10 +6,10 @@
 export const environment = {
     production: false,
     nodeList: [
-        'http://node-00.testnet.qwertycoin.org:8197/',
-        'http://node-01.testnet.qwertycoin.org:8197/',
-        'http://node-11.testnet.qwertycoin.org:8197/',
-//        'http://pool-01.testnet.qwertycoin.org:8197/'
+        'https://node-00.testnet.qwertycoin.org:8197/',
+        'https://node-01.testnet.qwertycoin.org:8197/',
+        'https://node-11.testnet.qwertycoin.org:8197/',
+        'https://pool-01.testnet.qwertycoin.org:8197/'
     ],
     poolList: [
         {

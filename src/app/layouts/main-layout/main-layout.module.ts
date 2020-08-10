@@ -20,7 +20,6 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatCardModule} from '@angular/material/card';
 import {TimeagoModule} from 'ngx-timeago';
 import {ComponentsModule} from '../../components/components.module';
-import {ScrollingModule} from '@angular/cdk/scrolling';
 
 @NgModule({
     imports: [
@@ -37,7 +36,6 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
         TimeagoModule.forRoot(),
         ToastrModule.forRoot(),
         ComponentsModule,
-        ScrollingModule,
     ],
     declarations: [
         DashboardComponent,

@@ -134,14 +134,12 @@
                                     <app-cubes [blockHash]="initialBlock.hash" class="col-md-2"></app-cubes>
                                     <div class="col-md-7">
                                         <div class="row">
-                                            <div class="col-md-4">{{ func.addCommas(initialBlock.height) }}</div>
-                                            <div class="col-md-4"></div>
-                                            <div class="col-md-4"></div>
+                                            <div class="col-md-6">{{ func.addCommas(initialBlock.height) }}</div>
+                                            <div class="col-md-6">Mined by <span class="text-primary">ExamplePool</span></div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-4">{{ (initialBlock.timestamp * 1000) | timeago:live }}</div>
-                                            <div class="col-md-4">{{ initialBlock.tx_count }} Transaction's</div>
-                                            <div class="col-md-4"></div>
+                                            <div class="col-md-6">{{ (initialBlock.timestamp * 1000) | timeago:live }}</div>
+                                            <div class="col-md-6">{{ initialBlock.tx_count }} Transaction's</div>
                                         </div>
                                     </div>
                                     <div class="col-md-3">
@@ -153,43 +151,6 @@
                             </mat-card-content>
                         </mat-card>
                     </div>
-
-                    <!--
-                    <div class="table-full-width table-responsive">
-                        <table class="table">
-                            <thead class=" text-primary">
-                            <th>
-                                Height
-                            </th>
-                            <th>
-                                Date
-                            </th>
-                            <th>
-                                Size
-                            </th>
-                            <th>
-                                Hash
-                            </th>
-                            <th>
-                                Difficulty
-                            </th>
-                            <th class="text-right">
-                                Txs
-                            </th>
-                            </thead>
-                            <tbody *ngIf="initialBlocks">
-                            <tr *ngFor="let initialBlock of initialBlocks">
-                                <td>{{ func.addCommas(initialBlock.height) }}</td>
-                                <td class="date-time">{{ func.formatDate(initialBlock.timestamp) }}</td>
-                                <td>{{ func.formatBytes(initialBlock.cumul_size, 2)}}</td>
-                                <td>{{ initialBlock.hash }}</td>
-                                <td class="blk-diff">{{ func.addCommas(initialBlock.difficulty) }}</td>
-                                <td>{{ initialBlock.tx_count }}</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    -->
                 </div>
             </div>
         </div>
