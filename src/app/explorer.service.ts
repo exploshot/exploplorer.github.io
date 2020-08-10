@@ -248,14 +248,13 @@ export class ExplorerService {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Headers': '*'
             },
             body: JSON.stringify(data)
         });
-
+        
         response.headers.set('Access-Control-Allow-Origin', '*');
         response.headers.set('Access-Control-Allow-Headers', '*');
+        response.headers.set('Access-Control-Allow-Methods', '*');
 
         return response.json();
     }

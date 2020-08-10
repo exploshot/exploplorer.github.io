@@ -6,15 +6,15 @@
 export const environment = {
     production: false,
     nodeList: [
-        'node-00.testnet.qwertycoin.org:8197/',
-        'node-01.testnet.qwertycoin.org:8197/',
-        'node-11.testnet.qwertycoin.org:8197/',
-        'pool-01.testnet.qwertycoin.org:8197/'
+        'http://node-00.testnet.qwertycoin.org:8197/',
+        'http://node-01.testnet.qwertycoin.org:8197/',
+        'http://node-11.testnet.qwertycoin.org:8197/',
+        'http://pool-01.testnet.qwertycoin.org:8197/'
     ],
     poolList: [
         {
             pool: 'pool-01.testnet.qwertycoin.org',
-            api: 'pool-01.testnet.qwertycoin.org:8119/stats'
+            api: 'http://pool-01.testnet.qwertycoin.org:8119/stats'
         }
 
     ],

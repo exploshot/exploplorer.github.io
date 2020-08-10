@@ -1,37 +1,37 @@
 export const environment = {
   production: true,
   nodeList: [
-    'node-01.qwertycoin.org:8197/',
-    'node-02.qwertycoin.org:8197/'
+    'http://node-01.qwertycoin.org:8197/',
+    'http://node-02.qwertycoin.org:8197/'
   ],
   poolList: [
     {
         pool: 'pool.qwertycoin.org',
-        api: 'pool.qwertycoin.org:8119/stats'
+        api: 'http://pool.qwertycoin.org:8119/stats'
     },
     {
         pool: 'qwertycoin.fairhash.org',
-        api: 'qwertycoin.fairhash.org/api/stats'
+        api: 'http://qwertycoin.fairhash.org/api/stats'
     },
     {
         pool: 'qwc.superpools.online',
-        api: 'qwc.cryptonote.club:8199/stats'
+        api: 'http://qwc.cryptonote.club:8199/stats'
     },
     {
         pool: 'superblockchain.con-ip.com/qwc',
-        api: 'superblockchain.con-ip.com:8333/stats'
+        api: 'http://superblockchain.con-ip.com:8333/stats'
     },
     {
         pool: 'easyhash.pro/qwc',
-        api: 'easyhash.pro/qwc/api/stats'
+        api: 'http://easyhash.pro/qwc/api/stats'
     },
     {
         pool: 'qwc.cryptonote.club',
-        api: 'qwc.cryptonote.club:8199/stats'
+        api: 'http://qwc.cryptonote.club:8199/stats'
     },
     {
         pool: 'newpool.pw/qwc',
-        api: 'minenice.newpool.pw:8205/stats'
+        api: 'http://minenice.newpool.pw:8205/stats'
     }
   ],
   coinUnits: 100000000,
