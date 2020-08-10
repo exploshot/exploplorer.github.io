@@ -36,7 +36,8 @@ export class Functions {
     }
 
     public getRandomNodeUrl(): string {
-        return environment.nodeList[this.randInt()];
+        const proxy = 'https://api.allorigins.win/raw?url=';
+        return proxy + environment.nodeList[this.randInt()];
     }
 
     public getReadableCoins(coins, digits, withoutSymbol) {

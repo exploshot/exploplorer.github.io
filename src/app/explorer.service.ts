@@ -152,7 +152,11 @@ export class ExplorerService {
     }
 
     getHttpBlockListByHeight(height: number): Observable<any> {
-        const headers = {'content-type': 'application/json'};
+        const headers = {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Headers': '*'
+        };
         const body = {
             'jsonrpc': '2.0',
             'id': 0,
