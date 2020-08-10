@@ -1840,8 +1840,6 @@ var ExplorerService = /** @class */ (function () {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json',
-                                'Access-Control-Allow-Origin': '*',
-                                'Access-Control-Allow-Headers': '*'
                             },
                             body: JSON.stringify(data)
                         })];
@@ -1849,6 +1847,7 @@ var ExplorerService = /** @class */ (function () {
                         response = _a.sent();
                         response.headers.set('Access-Control-Allow-Origin', '*');
                         response.headers.set('Access-Control-Allow-Headers', '*');
+                        response.headers.set('Access-Control-Allow-Methods', '*');
                         return [2 /*return*/, response.json()];
                 }
             });
@@ -2130,15 +2129,15 @@ __webpack_require__.r(__webpack_exports__);
 var environment = {
     production: false,
     nodeList: [
-        'node-00.testnet.qwertycoin.org:8197/',
-        'node-01.testnet.qwertycoin.org:8197/',
-        'node-11.testnet.qwertycoin.org:8197/',
-        'pool-01.testnet.qwertycoin.org:8197/'
+        'http://node-00.testnet.qwertycoin.org:8197/',
+        'http://node-01.testnet.qwertycoin.org:8197/',
+        'http://node-11.testnet.qwertycoin.org:8197/',
+        'http://pool-01.testnet.qwertycoin.org:8197/'
     ],
     poolList: [
         {
             pool: 'pool-01.testnet.qwertycoin.org',
-            api: 'pool-01.testnet.qwertycoin.org:8119/stats'
+            api: 'http://pool-01.testnet.qwertycoin.org:8119/stats'
         }
     ],
     coinUnits: 100000000,
