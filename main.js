@@ -1760,7 +1760,8 @@ var ExplorerService = /** @class */ (function () {
             absoluteExpiration: 30 * 1000
         };
         return this.cachSer.getOrSet('latest30Blocks', function (entryOptions) {
-            return _this.httpClient.post(nodeAddress, body, { 'headers': headers });
+            var response = _this.httpClient.post(nodeAddress, body, { 'headers': headers });
+            return response;
         }, options);
     };
     /*
@@ -1836,6 +1837,7 @@ var ExplorerService = /** @class */ (function () {
                         })];
                     case 1:
                         response = _a.sent();
+                        response.headers.append('Access-Control-Allow-Origin', '*');
                         return [2 /*return*/, response.json()];
                 }
             });
