@@ -10,7 +10,7 @@
     "scripts": {
         "ng": "ng",
         "start": "ng serve",
-        "build": "ng build --build-href https://explorer.exploshot.de",
+        "build": "ng build",
         "test": "ng test",
         "lint": "ng lint",
         "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start"
