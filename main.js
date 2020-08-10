@@ -1742,7 +1742,11 @@ var ExplorerService = /** @class */ (function () {
     };
     ExplorerService.prototype.getHttpBlockListByHeight = function (height) {
         var _this = this;
-        var headers = { 'content-type': 'application/json' };
+        var headers = {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Headers': '*'
+        };
         var body = {
             'jsonrpc': '2.0',
             'id': 0,
@@ -1905,7 +1909,8 @@ var Functions = /** @class */ (function () {
         return Math.floor(Math.random() * Math.floor(_environments_environment__WEBPACK_IMPORTED_MODULE_0__["environment"].nodeList.length));
     };
     Functions.prototype.getRandomNodeUrl = function () {
-        return _environments_environment__WEBPACK_IMPORTED_MODULE_0__["environment"].nodeList[this.randInt()];
+        var proxy = 'https://api.allorigins.win/raw?url=';
+        return proxy + _environments_environment__WEBPACK_IMPORTED_MODULE_0__["environment"].nodeList[this.randInt()];
     };
     Functions.prototype.getReadableCoins = function (coins, digits, withoutSymbol) {
         var amount = (parseInt(coins || 0) / _environments_environment__WEBPACK_IMPORTED_MODULE_0__["environment"].coinUnits).toFixed(digits || _environments_environment__WEBPACK_IMPORTED_MODULE_0__["environment"].coinUnits.toString().length - 1);
