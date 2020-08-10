@@ -1759,10 +1759,20 @@ var ExplorerService = /** @class */ (function () {
         var options = {
             absoluteExpiration: 30 * 1000
         };
-        return this.cachSer.getOrSet('latest30Blocks', function (entryOptions) {
-            var response = _this.httpClient.post(nodeAddress, body, { 'headers': headers });
-            return response;
-        }, options);
+        return new Promise(function (resolve, reject) {
+            _this.postData(nodeAddress, body).then(function (data) {
+                _this.latestBlockList = data.result.blocks;
+                resolve(_this.latestBlockList);
+            }).catch(function (error) {
+                try {
+                    console.log(JSON.parse(error.responseText));
+                }
+                catch (e) {
+                    console.log(e);
+                }
+                reject(error);
+            });
+        });
     };
     /*
       getPeers() {
@@ -1913,7 +1923,7 @@ var Functions = /** @class */ (function () {
     };
     Functions.prototype.getRandomNodeUrl = function () {
         var proxy = 'https://api.qwertycoin.org/index.php?mode=get&url=';
-        return proxy + _environments_environment__WEBPACK_IMPORTED_MODULE_0__["environment"].nodeList[this.randInt()];
+        return _environments_environment__WEBPACK_IMPORTED_MODULE_0__["environment"].nodeList[this.randInt()];
     };
     Functions.prototype.getReadableCoins = function (coins, digits, withoutSymbol) {
         var amount = (parseInt(coins || 0) / _environments_environment__WEBPACK_IMPORTED_MODULE_0__["environment"].coinUnits).toFixed(digits || _environments_environment__WEBPACK_IMPORTED_MODULE_0__["environment"].coinUnits.toString().length - 1);

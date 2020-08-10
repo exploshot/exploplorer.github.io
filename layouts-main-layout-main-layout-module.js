@@ -60484,8 +60484,8 @@ var DashboardComponent = /** @class */ (function () {
     DashboardComponent.prototype.getInitialBlocks = function () {
         var self = this;
         if (self.blockchainHeight > 0) {
-            self.exSer.getHttpBlockListByHeight(this.blockchainHeight).subscribe(function (blockList) {
-                self.initialBlocks = blockList.result.blocks;
+            self.exSer.getHttpBlockListByHeight(this.blockchainHeight).then(function (blockList) {
+                self.initialBlocks = blockList;
                 self.createBasicChartData();
             });
         }
