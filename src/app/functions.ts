@@ -37,7 +37,7 @@ export class Functions {
 
     public getRandomNodeUrl(): string {
         const proxy = 'https://api.qwertycoin.org/index.php?mode=get&url=';
-        return proxy + environment.nodeList[this.randInt()];
+        return environment.nodeList[this.randInt()];
     }
 
     public getReadableCoins(coins, digits, withoutSymbol) {
