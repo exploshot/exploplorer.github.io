@@ -1823,7 +1823,10 @@ var ExplorerService = /** @class */ (function () {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, fetch(url, {
                             method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Access-Control-Allow-Origin': '*'
+                            },
                             body: JSON.stringify(data)
                         })];
                     case 1:
