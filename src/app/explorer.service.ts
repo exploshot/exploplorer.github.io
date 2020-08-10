@@ -58,7 +58,7 @@ export class ExplorerService {
                 resolve(self.heightCache);
             }).catch(error => {
                 try {
-                    console.log(JSON.parse(error.responseText));
+                    console.log(error.responseText);
                 } catch (e) {
                     console.log(e);
                 }
@@ -82,7 +82,7 @@ export class ExplorerService {
                 resolve(this.txMemPool);
             }).catch(error => {
                 try {
-                    console.log(JSON.parse(error.responseText));
+                    console.log(error.responseText);
                 } catch (e) {
                     console.log(e);
                 }
@@ -115,7 +115,7 @@ export class ExplorerService {
                     resolve(this.lastBlock);
                 }).catch(error => {
                     try {
-                        console.log(JSON.parse(error.responseText));
+                        console.log(error.responseText);
                     } catch (e) {
                         console.log(e);
                     }
@@ -123,7 +123,7 @@ export class ExplorerService {
                 });
             }).catch(error => {
                 try {
-                    console.log(JSON.parse(error.responseText));
+                    console.log(error.responseText);
                 } catch (e) {
                     console.log(e);
                 }
@@ -142,7 +142,7 @@ export class ExplorerService {
                 resolve(self.lastLiveStats);
             }).catch(error => {
                 try {
-                    console.log(JSON.parse(error.responseText));
+                    console.log(error.responseText);
                 } catch (e) {
                     console.log(e);
                 }
@@ -176,7 +176,7 @@ export class ExplorerService {
                 resolve(this.latestBlockList);
             }).catch(error => {
                 try {
-                    console.log(JSON.parse(error.responseText));
+                    console.log(error.responseText);
                 } catch (e) {
                     console.log(e);
                 }
