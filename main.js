@@ -2108,15 +2108,15 @@ __webpack_require__.r(__webpack_exports__);
 var environment = {
     production: false,
     nodeList: [
-        'https://node-00.testnet.qwertycoin.org:8197/',
-        'https://node-01.testnet.qwertycoin.org:8197/',
-        'https://node-11.testnet.qwertycoin.org:8197/',
-        'https://pool-01.testnet.qwertycoin.org:8197/'
+        'node-00.testnet.qwertycoin.org:8197/',
+        'node-01.testnet.qwertycoin.org:8197/',
+        'node-11.testnet.qwertycoin.org:8197/',
+        'pool-01.testnet.qwertycoin.org:8197/'
     ],
     poolList: [
         {
             pool: 'pool-01.testnet.qwertycoin.org',
-            api: 'https://pool-01.testnet.qwertycoin.org:8119/stats'
+            api: 'pool-01.testnet.qwertycoin.org:8119/stats'
         }
     ],
     coinUnits: 100000000,
