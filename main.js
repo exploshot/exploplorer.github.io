@@ -1647,7 +1647,7 @@ var ExplorerService = /** @class */ (function () {
                 resolve(self.heightCache);
             }).catch(function (error) {
                 try {
-                    console.log(JSON.parse(error.responseText));
+                    console.log(error.responseText);
                 }
                 catch (e) {
                     console.log(e);
@@ -1671,7 +1671,7 @@ var ExplorerService = /** @class */ (function () {
                 resolve(_this.txMemPool);
             }).catch(function (error) {
                 try {
-                    console.log(JSON.parse(error.responseText));
+                    console.log(error.responseText);
                 }
                 catch (e) {
                     console.log(e);
@@ -1704,7 +1704,7 @@ var ExplorerService = /** @class */ (function () {
                     resolve(_this.lastBlock);
                 }).catch(function (error) {
                     try {
-                        console.log(JSON.parse(error.responseText));
+                        console.log(error.responseText);
                     }
                     catch (e) {
                         console.log(e);
@@ -1713,7 +1713,7 @@ var ExplorerService = /** @class */ (function () {
                 });
             }).catch(function (error) {
                 try {
-                    console.log(JSON.parse(error.responseText));
+                    console.log(error.responseText);
                 }
                 catch (e) {
                     console.log(e);
@@ -1731,7 +1731,7 @@ var ExplorerService = /** @class */ (function () {
                 resolve(self.lastLiveStats);
             }).catch(function (error) {
                 try {
-                    console.log(JSON.parse(error.responseText));
+                    console.log(error.responseText);
                 }
                 catch (e) {
                     console.log(e);
@@ -1765,7 +1765,7 @@ var ExplorerService = /** @class */ (function () {
                 resolve(_this.latestBlockList);
             }).catch(function (error) {
                 try {
-                    console.log(JSON.parse(error.responseText));
+                    console.log(error.responseText);
                 }
                 catch (e) {
                     console.log(e);
