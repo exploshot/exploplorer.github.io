@@ -182,7 +182,7 @@ export class ExplorerService {
                 }
                 reject(error);
             });
-        })
+        });
     }
 
     /*
@@ -251,7 +251,7 @@ export class ExplorerService {
             },
             body: JSON.stringify(data)
         });
-        
+
         response.headers.set('Access-Control-Allow-Origin', '*');
         response.headers.set('Access-Control-Allow-Headers', '*');
         response.headers.set('Access-Control-Allow-Methods', '*');
