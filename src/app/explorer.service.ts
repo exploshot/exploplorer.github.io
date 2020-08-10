@@ -254,8 +254,8 @@ export class ExplorerService {
             body: JSON.stringify(data)
         });
 
-        response.headers.append('Access-Control-Allow-Origin', '*');
-        response.headers.append('Access-Control-Allow-Headers', '*');
+        response.headers.set('Access-Control-Allow-Origin', '*');
+        response.headers.set('Access-Control-Allow-Headers', '*');
 
         return response.json();
     }
