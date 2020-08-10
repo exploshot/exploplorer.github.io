@@ -151,7 +151,7 @@ export class ExplorerService {
         });
     }
 
-    getHttpBlockListByHeight(height: number): Observable<any> {
+    getHttpBlockListByHeight(height: number) {
         const headers = {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*',
@@ -170,11 +170,19 @@ export class ExplorerService {
             absoluteExpiration: 30 * 1000
         };
 
-        return this.cachSer.getOrSet('latest30Blocks', (entryOptions) => {
-            const response = this.httpClient.post(nodeAddress, body, {'headers': headers});
-
-            return response;
-        }, options);
+        return new Promise((resolve, reject) => {
+            this.postData(nodeAddress, body).then((data: any) => {
+                this.latestBlockList = data.result.blocks;
+                resolve(this.latestBlockList);
+            }).catch(error => {
+                try {
+                    console.log(JSON.parse(error.responseText));
+                } catch (e) {
+                    console.log(e);
+                }
+                reject(error);
+            });
+        })
     }
 
     /*

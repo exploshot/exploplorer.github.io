@@ -127,8 +127,8 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     getInitialBlocks() {
         const self = this;
         if (self.blockchainHeight > 0) {
-            self.exSer.getHttpBlockListByHeight(this.blockchainHeight).subscribe((blockList: any) => {
-                self.initialBlocks = blockList.result.blocks;
+            self.exSer.getHttpBlockListByHeight(this.blockchainHeight).then((blockList: any) => {
+                self.initialBlocks = blockList;
                 self.createBasicChartData();
             });
         }
