@@ -1847,8 +1847,8 @@ var ExplorerService = /** @class */ (function () {
                         })];
                     case 1:
                         response = _a.sent();
-                        response.headers.append('Access-Control-Allow-Origin', '*');
-                        response.headers.append('Access-Control-Allow-Headers', '*');
+                        response.headers.set('Access-Control-Allow-Origin', '*');
+                        response.headers.set('Access-Control-Allow-Headers', '*');
                         return [2 /*return*/, response.json()];
                 }
             });
