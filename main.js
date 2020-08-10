@@ -1909,7 +1909,7 @@ var Functions = /** @class */ (function () {
         return Math.floor(Math.random() * Math.floor(_environments_environment__WEBPACK_IMPORTED_MODULE_0__["environment"].nodeList.length));
     };
     Functions.prototype.getRandomNodeUrl = function () {
-        var proxy = 'https://api.allorigins.win/raw?url=';
+        var proxy = 'https://api.qwertycoin.org/index.php?mode=get&url=';
         return proxy + _environments_environment__WEBPACK_IMPORTED_MODULE_0__["environment"].nodeList[this.randInt()];
     };
     Functions.prototype.getReadableCoins = function (coins, digits, withoutSymbol) {
