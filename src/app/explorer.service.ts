@@ -171,7 +171,9 @@ export class ExplorerService {
         };
 
         return this.cachSer.getOrSet('latest30Blocks', (entryOptions) => {
-            return this.httpClient.post(nodeAddress, body, {'headers': headers});
+            const response = this.httpClient.post(nodeAddress, body, {'headers': headers});
+
+            return response;
         }, options);
     }
 
@@ -243,6 +245,8 @@ export class ExplorerService {
             },
             body: JSON.stringify(data)
         });
+
+        response.headers.append('Access-Control-Allow-Origin', '*');
 
         return response.json();
     }
